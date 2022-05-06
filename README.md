@@ -179,57 +179,58 @@ for 见demo3
 你可以用v-model指令在表单 <input>、<textarea> 及<select> 元素上创建双向数据绑定。它会根据控件类型自动选取正确的方法来更新元素。尽管有些神奇，但v-model本质上不过是语法糖。它负责监听户的输入事件以更新数据，并对一些极端场景进行一些特殊处理。
 
 ​ 注意：v-model会忽略所有元素的value、checked、selected特性的初始值而总是将Vue实例的数据作为数据来源，你应该通过JavaScript在组件的data选项中声明。
-  ```html
-     <!DOCTYPE html>
-     <html lang="en">
-     <head>
-         <meta charset="UTF-8">
-         <title>Title</title>
-     </head>
-     <body>
-     
-     <div id="app">
-         gender：
-         <input type="radio" name="sex" value="male" v-model="chris" > 男
-         <input type="radio" name="sex" value="female" v-model="chris"> 女
-     
-        <h1>选中了谁： {{chris}}</h1>
-         
-     
-         输入<input type="text" v-model="message">同步 输出{{message}}
-         <br/>
-         <br/>
-         <br/>
-         <hr>
-         <div>
-             <select v-model="chris">
-                 <option value="" disabled>--please select--</option>
-                 <option>a</option>
-                 <option>b</option>
-                 <option>c</option>
-                 <option>d</option>
-             </select>
-             <h1>下来菜单默认选中：{{chris}}</h1>
-         </div>
-     
-     
-     
-     </div>
-     
-     
-     
-     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
-     <script>
-         var vm = new Vue({
-             el : "#app",
-             data: {
-                 message:'',
-                chris:''
-             } ,
-             methods: {
-             }
-         });
-     </script>
-     </body>
-     </html>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    gender：
+    <input type="radio" name="sex" value="male" v-model="chris" > 男
+    <input type="radio" name="sex" value="female" v-model="chris"> 女
+
+   <h1>选中了谁： {{chris}}</h1>
+    
+
+    输入<input type="text" v-model="message">同步 输出{{message}}
+    <br/>
+    <br/>
+    <br/>
+    <hr>
+    <div>
+        <select v-model="chris">
+            <option value="" disabled>--please select--</option>
+            <option>a</option>
+            <option>b</option>
+            <option>c</option>
+            <option>d</option>
+        </select>
+        <h1>下来菜单默认选中：{{chris}}</h1>
+    </div>
+
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el : "#app",
+        data: {
+            message:'',
+           chris:''
+        } ,
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>
 ```
