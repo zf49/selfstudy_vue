@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<div id="app1">
+    <h1> {{message}}</h1>
+</div>
+
+
+<div id="app2">
+    <span v-bind:title="message">
+        悬停在此处
+    </span>
+</div>
+
+
+
+<!--    导入vue.js-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+    var vm1 = new Vue({
+       el : "#app1",
+        data: {
+            message: "hello , vue!"
+        }
+    });
+    var vm2 = new Vue({
+        el : "#app2",
+        data: {
+            message: "v-bind"
+        }
+    });
+</script>
+
+
+
+</body>
+</html>
