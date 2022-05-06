@@ -181,7 +181,7 @@ for 见demo3
 ​ 注意：v-model会忽略所有元素的value、checked、selected特性的初始值而总是将Vue实例的数据作为数据来源，你应该通过JavaScript在组件的data选项中声明。
 
 ```html
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -232,5 +232,5 @@ for 见demo3
     });
 </script>
 </body>
-</html>
-```
+</html> 
+  ```
