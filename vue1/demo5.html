@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    gender：
+    <input type="radio" name="sex" value="male" v-model="chris" > 男
+    <input type="radio" name="sex" value="female" v-model="chris"> 女
+
+   <h1>选中了谁： {{chris}}</h1>
+    
+
+    输入<input type="text" v-model="message">同步 输出{{message}}
+    <br/>
+    <br/>
+    <br/>
+    <hr>
+    <div>
+        <select v-model="chris">
+            <option value="" disabled>--please select--</option>
+            <option>a</option>
+            <option>b</option>
+            <option>c</option>
+            <option>d</option>
+        </select>
+        <h1>下来菜单默认选中：{{chris}}</h1>
+    </div>
+
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el : "#app",
+        data: {
+            message:'',
+           chris:''
+        } ,
+        methods: {
+        }
+    });
+</script>
+</body>
+</html>
