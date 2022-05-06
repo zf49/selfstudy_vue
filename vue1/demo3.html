@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+        <li v-for="item in items">
+            {{item.message}}
+        </li>
+
+    <li v-for="(item,index) in items">
+        
+        {{item.message}}----{{index}}
+<!--  item--每个元素
+      index--每个下角标-->
+    </li>
+
+    
+</div>
+
+
+<!--    导入vue.js-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el : "#app",
+        data: {
+           items: [
+               {message: 'chris study vue'},
+               {message: 'chris study front-end'},
+               {message: 'chris study back-end'}
+           ]
+        }
+    });
+</script>
+
+</body>
+</html>
