@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <chris v-for="item in items" v-bind:chris="item"></chris>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+
+    Vue.component("chris",{
+        props:['chris'],
+          template: '<li>{{chris}}</li>'
+    });
+
+    var vm = new Vue({
+        el : "#app",
+        data:{
+            items:["java","linux","front-end"]
+        }
+    });
+</script>
+</body>
+</html>
