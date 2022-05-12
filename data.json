@@ -1,0 +1,19 @@
+{
+ "name": "Chris Wang",
+  "url": "github.com/zf49",
+  "page": 1,
+  "isNonProfit": true,
+  "address": {
+    "street": "农大",
+    "city": "Beijing",
+    "country": "China"
+  },
+  "links": [
+    {"name":"bilibili",
+    "url": "www.bilibili.com"},
+    {"name": "baidu",
+    "url": "www.baidu.com"},
+    {"name": "王哥的github",
+    "url": "github.com/zf49"}
+  ]
+}

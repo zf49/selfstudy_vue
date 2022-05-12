@@ -2,11 +2,22 @@
 
 # Vue_Self Study
 
+Vue 7大属性
+el：指示Vue编译器从什么地方开始解析Vue语法，是一个占位符；
+data： //变量、数据
+methods //方法
+template：用来设置模,会替换页面元素，包括占位符
+render：创建真正的Virtual DOM
+computed：计算属性
+watch：监听 监听变化： watch:function(new,old){}
+
 ## 绑定+判断
 ### v-bind
    现在数据和DOM已经被建立了关联，所有的东西都是响应式的。我们在控制台操作对象的属性，界面可以实时更新。
   
    我们可以使用v-bind来绑定元素属性！
+   
+ 
   
   ```html
      <!DOCTYPE html>
@@ -237,6 +248,19 @@ for 见demo3
 
 
 ## VUE组件
+
+Vue.component()：注册组件
+pan：自定义组件的名字
+template：组件的模板
+
+使用props属性传递参数
+像上面那样用组件没有任何意义，所以我们是需要传递参数到组件的，此时就需要使用props属性了！
+  注意：默认规则下props属性里的值不能为大写；
+
+说明：
+
+v-for=“item in items”：遍历Vue实例中定义的名为items的数组，并创建同等数量的组件
+v-bind:panh=“item”：将遍历的item项绑定到组件中props定义名为item属性上；= 号左边的panh为props定义的属性名，右边的为item in items 中遍历的item项的值
 ```html
   <!DOCTYPE html>
   <html lang="en">

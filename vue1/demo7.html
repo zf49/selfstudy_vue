@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-binf="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--v-cloak 解决闪烁问题-->
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="vue">
+    <ul><li>{{info.name}}</li><li>{{info.address.country}}</li><li>{{info.address.city}}</li><li>{{info.address.street}}</li><li>{{info.url}}</li></ul>
+</div>
+
+
+<!--引入js文件-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script type="text/javascript">
+
+
+
+    var vm = new Vue({
+        el:"#vue",
+        data(){
+            return{
+                info:{
+                    name:null,
+                    address:{
+                        country:null,
+                        city:null,
+                        street:null
+                    },
+                    url:null
+                }
+            }
+        },
+        mounted(){
+           axios.get('../data.json').then(response=>(this.info = response.data));
+        }
+    });
+</script>
+</body>
+</html>
